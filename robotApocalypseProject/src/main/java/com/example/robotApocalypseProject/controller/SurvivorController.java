@@ -38,7 +38,7 @@ public class SurvivorController {
      Query Stat to update the user information is:
      UPDATE dbname SET column='new info' WHERE name='username/id';
      */
-    @PutMapping
+    @PutMapping("/update-location/{name}")
     public ResponseEntity<Survivor> updateSurvivorLocationByName(@PathVariable String name, @RequestParam String location) {
         Optional<Survivor> optionalSurvivor = survivorRepository.findByName(name);
 
